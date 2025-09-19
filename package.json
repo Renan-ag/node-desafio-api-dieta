@@ -1,0 +1,32 @@
+{
+  "name": "api-dieta",
+  "version": "1.0.0",
+  "description": "API para registro de refeições de um usuario ",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest --run",
+    "dev": "tsx watch src/server.ts",
+    "migrate": "tsx ./node_modules/knex/bin/cli.js --knexfile ./knexfile.ts migrate:latest",
+    "migrate:rollback": "tsx ./node_modules/knex/bin/cli.js --knexfile ./knexfile.ts migrate:rollback",
+    "migrate:make": "tsx ./node_modules/knex/bin/cli.js --knexfile ./knexfile.ts migrate:make"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^11.0.2",
+    "dotenv": "^17.2.2",
+    "fastify": "^5.5.0",
+    "sqlite3": "^5.1.7",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "knex": "^3.1.0",
+    "supertest": "^7.1.4",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
